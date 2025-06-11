@@ -26,13 +26,13 @@ int f1(void)
 void f2 (int a, int b)
 {
     
-    if (a > b || a < 10)
+    if (a > b || a < 11)
     {
         f1();
     }
     f3();
-    puts("blah");
-    
+    puts("test");
+
 }
 
 void f3(void)
