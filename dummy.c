@@ -9,10 +9,10 @@ void f6 (int x);
 void f7(int x);
 void f8(void);
 
-int main (void)
+int main(void)
 {
     int x = f1();
-    f6 (x);
+    f6(x);
     return 0;
 }
 
@@ -23,14 +23,16 @@ int f1(void)
     return 0;
 }
 
-void f2(int a, int b)
+void f2 (int a, int b)
 {
+    
     if (a > b || a < 10)
     {
         f1();
     }
     f3();
     puts("blah");
+    
 }
 
 void f3(void)
