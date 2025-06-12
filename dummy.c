@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include "lib/func.h"
 
 /* forward declarations */
 int  f1(void);
 void f2(int a, int b);
-void f3(void);
-void f4(void);
+// void f3(void);
+// void f4(void);
 void f6 (int x);
 void f7(int x);
 void f8(void);
@@ -26,7 +27,7 @@ int f1(void)
 void f2 (int a, int b)
 {
     
-    if (a > b || a < 11)
+    if (a > b || a < 12)
     {
         f1();
     }
@@ -35,15 +36,15 @@ void f2 (int a, int b)
 
 }
 
-void f3(void)
-{
-    f4();
-}
+// void f3(void)
+// {
+//     f4();
+// }
 
-void f4(void)
-{
-    /* no-op */
-}
+// void f4(void)
+// {
+//     /* no-op */
+// }
 
 void f6(int x)
 {
