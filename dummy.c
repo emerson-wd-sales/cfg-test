@@ -20,7 +20,7 @@ int main(void)
 
 int f1(void)
 {
-    f2(0, 0);
+    f2 (0, 0);
     return 0;
 }
 
