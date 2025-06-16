@@ -1,0 +1,40 @@
+f1() <int f1 (void) at dummy.c:21> (R):
+    main() <int main (void) at dummy.c:13>
+    f2() <void f2 (int a, int b) at dummy.c:27> (R):
+        f1() <int f1 (void) at dummy.c:21> (recursive: see 1)
+f2() <void f2 (int a, int b) at dummy.c:27> (R):
+    f1() <int f1 (void) at dummy.c:21> (R):
+        main() <int main (void) at dummy.c:13>
+        f2() <void f2 (int a, int b) at dummy.c:27> (recursive: see 5)
+f3() <void f3 (void) at lib/func.c:3>:
+    f2() <void f2 (int a, int b) at dummy.c:27> (R):
+        f1() <int f1 (void) at dummy.c:21> (R):
+            main() <int main (void) at dummy.c:13>
+            f2() <void f2 (int a, int b) at dummy.c:27> (recursive: see 10)
+f4() <void f4 (void) at lib/func.c:8>:
+    f3() <void f3 (void) at lib/func.c:3>:
+        f2() <void f2 (int a, int b) at dummy.c:27> (R):
+            f1() <int f1 (void) at dummy.c:21> (R):
+                main() <int main (void) at dummy.c:13>
+                f2() <void f2 (int a, int b) at dummy.c:27> (recursive: see 16)
+f6() <void f6 (int x) at dummy.c:49> (R):
+    main() <int main (void) at dummy.c:13>
+    f8() <void f8 (void) at dummy.c:61> (R):
+        f7() <void f7 (int x) at dummy.c:55> (R):
+            f6() <void f6 (int x) at dummy.c:49> (recursive: see 20)
+f7() <void f7 (int x) at dummy.c:55> (R):
+    f6() <void f6 (int x) at dummy.c:49> (R):
+        main() <int main (void) at dummy.c:13>
+        f8() <void f8 (void) at dummy.c:61> (R):
+            f7() <void f7 (int x) at dummy.c:55> (recursive: see 25)
+f8() <void f8 (void) at dummy.c:61> (R):
+    f7() <void f7 (int x) at dummy.c:55> (R):
+        f6() <void f6 (int x) at dummy.c:49> (R):
+            main() <int main (void) at dummy.c:13>
+            f8() <void f8 (void) at dummy.c:61> (recursive: see 30)
+main() <int main (void) at dummy.c:13>
+puts():
+    f2() <void f2 (int a, int b) at dummy.c:27> (R):
+        f1() <int f1 (void) at dummy.c:21> (R):
+            main() <int main (void) at dummy.c:13>
+            f2() <void f2 (int a, int b) at dummy.c:27> (recursive: see 37)

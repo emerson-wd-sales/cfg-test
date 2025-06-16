@@ -1,0 +1,11 @@
+main() <int main (void) at dummy.c:13>:
+    f1() <int f1 (void) at dummy.c:21> (R):
+        f2() <void f2 (int a, int b) at dummy.c:27> (R):
+            f1() <int f1 (void) at dummy.c:21> (recursive: see 2)
+            f3() <void f3 (void) at lib/func.c:3>:
+                f4() <void f4 (void) at lib/func.c:8>
+            puts()
+    f6() <void f6 (int x) at dummy.c:49> (R):
+        f7() <void f7 (int x) at dummy.c:55> (R):
+            f8() <void f8 (void) at dummy.c:61> (R):
+                f6() <void f6 (int x) at dummy.c:49> (recursive: see 8)
