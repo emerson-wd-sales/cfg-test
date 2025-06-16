@@ -39,7 +39,7 @@ int f1(void)
 void f2 (int a, int b)
 {
     
-    if (a > b || a < 12)
+    if (a > b || a < 13)
     {
         f1();
     }
