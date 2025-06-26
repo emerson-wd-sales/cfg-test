@@ -5,7 +5,7 @@ import re
 import pprint
 from collections import defaultdict
 
-def extract_file_line_map(diff_file_path, simplify_paths=True):
+def extract_file_line_map(diff_file_path, simplify_paths=False):
     file_line_map = defaultdict(set)
     current_file = None
 

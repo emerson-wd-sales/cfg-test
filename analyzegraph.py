@@ -67,7 +67,7 @@ def analyze(reverse_graph, forward_graph, locations, changed_funcs):
     result = set()
 
     for func in changed_funcs:
-        print("analising" + func)
+        print("analising " + func)
         ftype = "library" if is_library_function(func, locations) else "nonlib"
         print(func + " is " + ftype)
         direct_callers = reverse_graph.get(func, set())

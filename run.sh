@@ -2,13 +2,14 @@
 set -e  # Exit immediately if any command fails
 
 # Check for two arguments (commit hashes or refs)
-if [ "$#" -ne 2 ]; then
-    echo "Usage: $0 <commit1> <commit2>"
-    exit 1
-fi
+# if [ "$#" -ne 2 ]; then
+#     echo "Usage: $0 <commit1> <commit2>"
+#     exit 1
+# fi
 
 # Run git difftool and save to file
-git difftool "$1" "$2" > changedlines.txt
+# git difftool "$1" "$2" > changedlines.txt
+git difftool */*.c *.c > changedlines.txt
 
 # Extract line changes
 python3 extractlines.py changedlines.txt
