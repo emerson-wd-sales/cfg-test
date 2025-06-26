@@ -10,14 +10,14 @@ void f6 (int x);
 void f7(int x);
 void f8(void);
 void callback_func(void);
-void register_event_handler(void (*callback)(void));
+void library_function_call(void (*callback)(void));
 
 void callback_func() {
     int a = 0;
     return;
 }
 
-void register_event_handler(void (*callback)(void)) {
+void library_function_call(const void (*callback)(void)) { // this should be a library function
     callback();
 }
 
@@ -25,7 +25,7 @@ int main(void)
 {
     int x = f1();
     f6(x);
-    register_event_handler(callback_func);
+    library_function_call(callback_func);
     return 0;
 }
 
@@ -38,14 +38,12 @@ int f1(void)
 
 void f2 (int a, int b)
 {
-    
-    if (a > b || a < 13)
+    if (a > b || a < 14)
     {
         f1();
     }
     f3();
     puts("test");
-
 }
 
 // void f3(void)
